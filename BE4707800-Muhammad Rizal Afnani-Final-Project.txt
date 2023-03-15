@@ -1,0 +1,74 @@
+BE4707800-Muhammad Rizal Afnani-Final-Project
+Daftar Anggota
+
+Pengunjung ingin menjadi Anggota
+IF calon anggota sudah serahkan data anggota
+        IF sudah mengisi formulir pendaftaran
+           WRITE data anggota di data ANGGOTA
+   ELSE
+           Isi formulir
+ELSE
+     Serahkan data anggota/biodata
+
+ 
+
+Transaksi Peminjaman
+
+   Pengunjung mencari buku
+   READ id buku di data BUKU
+   IF Anggota menemukan buku yang diinginkan
+          IF Buku yang ingin dipinjam tersedia
+             READ No anggota di data ANGGOTA
+             IF Status Peminjam adalah ANGGOTA
+                 READ Status peminjaman di Data ANGGOTA
+                 IF Tidak ada tanggungan peminjaman
+                   IF sudah dilakukan transaksi peminjaman
+                        WRITE PEMINJAMAN
+                        Serahkan Buku dan bukti Peminjaman
+                   ELSE
+                        Transaksi Peminjaman   
+                 ELSE
+                   Tidak diperkenankan Meminjam
+             ELSE
+                 Tidak bisa meminjam buku
+          ELSE
+             Tidak jadi meminjam buku tersebut
+   ELSE
+          Buku tidak tersedia
+
+ 
+
+Transkasi Pengembalian
+
+   IF Anggota ingin Mengembalikan
+           IF no transaksi dan buku sudah diserahkan
+              READ data transaksi di data PEMINJAM
+              WRITE status Pinjam di Data ANGGOTA
+              IF tanggal pengembalian melewati batas
+                  Hitung denda
+                  IF sudah bayar denda
+                     WRITE status Peminjaman di data BUKU
+                     Serahkan bukti pengembalian
+                  ELSE
+                     Bayar denda
+              ELSE
+                  Serahkan bukti pengembalian
+           ELSE
+              Serahkan Buku dan no transaksi   
+   ELSE
+           Anggota/pengunjung hanya membaca
+
+ 
+
+Permintaan Buku
+
+IF Ada laporan Permintaan buku
+        IF telah dicek laporan permintaan buku
+           IF buku bisa disediakan
+               Buatkan laporan pengadaan buku
+           ELSE
+               Buku ditolak untuk disediakan
+   ELSE
+           lakukan pengecekan permintaan buku
+ELSE
+        Tidak ada buku yang perlu disediakan
