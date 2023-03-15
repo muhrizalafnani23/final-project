@@ -72,3 +72,4 @@ IF Ada laporan Permintaan buku
            lakukan pengecekan permintaan buku
 ELSE
         Tidak ada buku yang perlu disediakan
+end
