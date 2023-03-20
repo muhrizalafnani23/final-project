@@ -59,17 +59,3 @@ Transkasi Pengembalian
            Anggota/pengunjung hanya membaca
 
  
-
-Permintaan Buku
-
-IF Ada laporan Permintaan buku
-        IF telah dicek laporan permintaan buku
-           IF buku bisa disediakan
-               Buatkan laporan pengadaan buku
-           ELSE
-               Buku ditolak untuk disediakan
-   ELSE
-           lakukan pengecekan permintaan buku
-ELSE
-        Tidak ada buku yang perlu disediakan
-end
